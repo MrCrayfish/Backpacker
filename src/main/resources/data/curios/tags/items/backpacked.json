@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "backpacker:rucksack",
+        "backpacker:shulkerpack",
+        "backpacker:netherpack",
+        "backpacker:endersack"
+    ]
+}
