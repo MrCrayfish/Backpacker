@@ -16,6 +16,6 @@ public class ModItems
 {
     public static final DeferredRegister<Item> REGISTER = DeferredRegister.create(ForgeRegistries.ITEMS, Reference.MOD_ID);
 
-    public static final RegistryObject<Item> IRON_BACKPACK = REGISTER.register("iron_backpack", () -> new UpgradedBackpackItem(2, Backpacker.IRON_BACKPACK_TEXTURE, new Item.Properties().maxStackSize(1).group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> RUCKSACK_BACKPACK = REGISTER.register("rucksack", () -> new UpgradedBackpackItem(2, Backpacker.RUCKSACK_TEXTURE, new Item.Properties().maxStackSize(1).group(ItemGroup.MISC)));
 
 }

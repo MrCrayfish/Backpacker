@@ -12,7 +12,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 @Mod(Reference.MOD_ID)
 public class Backpacker
 {
-    public static final ResourceLocation IRON_BACKPACK_TEXTURE = new ResourceLocation(Reference.MOD_ID, "textures/entity/iron_backpack.png");
+    public static final ResourceLocation RUCKSACK_TEXTURE = new ResourceLocation(Reference.MOD_ID, "textures/entity/rucksack.png");
 
     public Backpacker()
     {
