@@ -2,9 +2,9 @@
     "type": "minecraft:crafting_shaped",
     "group": "backpack",
     "pattern": [
-        "LLL",
+        " L ",
         "LIL",
-        "LLL"
+        " L "
     ],
     "key": {
         "L": {
