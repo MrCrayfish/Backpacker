@@ -28,6 +28,6 @@ description="An addon for Backpacked that adds more variants of backpacks"
 [[dependencies.backpacker]]
     modId="backpacked"
     mandatory=true
-    versionRange="[1.6.0,)"
+    versionRange="[1.7.0,)"
     ordering="AFTER"
     side="BOTH"
