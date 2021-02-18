@@ -31,7 +31,9 @@ public abstract class BackpackLayerMixin
     private ModelBackpack model;
 
     /**
-     * @author
+     * Overrides the rendering to allowing colouring of the backpack model
+     *
+     * @author MrCrayfish
      */
     @Overwrite(remap = false)
     public void render(MatrixStack stack, IRenderTypeBuffer renderTypeBuffer, int packedLightIn, PlayerEntity player, float p_225628_5_, float p_225628_6_, float red, float green, float blue, float alpha)
@@ -40,20 +42,16 @@ public abstract class BackpackLayerMixin
         if(backpack.getItem() instanceof BackpackItem)
         {
             ItemStack chestStack = player.getItemStackFromSlot(EquipmentSlotType.CHEST);
-            if(chestStack.getItem() == Items.ELYTRA)
-            {
-                return;
-            }
+            if(chestStack.getItem() == Items.ELYTRA) return;
 
-            if(Backpacked.isCuriosLoaded() && !Curios.isBackpackVisible(player))
-            {
-                return;
-            }
+            if(Backpacked.isCuriosLoaded() && !Curios.isBackpackVisible(player)) return;
 
             stack.push();
+
             BackpackLayer layer = (BackpackLayer) (Object) this;
             ((BipedModel) layer.getEntityModel()).setModelAttributes(this.model);
             this.model.setupAngles((BipedModel) layer.getEntityModel());
+
             BackpackItem item = (BackpackItem) backpack.getItem();
             if(item instanceof IColored)
             {
@@ -67,8 +65,10 @@ public abstract class BackpackLayerMixin
                 IVertexBuilder overlayBuilder = ItemRenderer.func_239391_c_(renderTypeBuffer, this.model.getRenderType(texture), false, backpack.hasEffect());
                 this.model.render(stack, overlayBuilder, packedLightIn, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
             }
+
             IVertexBuilder builder = ItemRenderer.func_239391_c_(renderTypeBuffer, this.model.getRenderType(item.getModelTexture()), false, backpack.hasEffect());
             this.model.render(stack, builder, packedLightIn, OverlayTexture.NO_OVERLAY, red, green, blue, 1.0F);
+
             stack.pop();
         }
     }
