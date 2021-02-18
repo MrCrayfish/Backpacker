@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.mrcrayfish.backpacker.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.8",
+  "refmap": "cgm.refmap.json",
+  "client": [
+    "client.BackpackLayerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

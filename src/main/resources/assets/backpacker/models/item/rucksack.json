@@ -1,6 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "backpacker:item/rucksack"
+        "layer0": "backpacker:item/rucksack",
+        "layer1": "backpacker:item/rucksack_overlay"
     }
 }
