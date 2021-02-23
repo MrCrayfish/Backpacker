@@ -4,7 +4,7 @@ license="GNU General Public License 3"
 
 [[mods]]
 modId="backpacker"
-version="1.2.0"
+version="1.2.1"
 displayName="Backpacker"
 updateJSONURL="https://raw.githubusercontent.com/MrCrayfish/ModUpdates/master/backpacker/update.json"
 displayURL="https://mrcrayfish.com/mods?id=backpacker"
