@@ -10,6 +10,7 @@ import com.mrcrayfish.backpacked.item.BackpackItem;
 import com.mrcrayfish.backpacker.crafting.IColored;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.ItemRenderer;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.entity.player.PlayerEntity;
@@ -64,14 +65,14 @@ public abstract class BackpackLayerMixin
                 float b = (float) (color & 255) / 255.0F;
                 String textureLocation = item.getModelTexture().toString();
                 ResourceLocation texture = new ResourceLocation(textureLocation.substring(0, textureLocation.length() - 4) + "_overlay.png");
-                IVertexBuilder overlayBuilder = ItemRenderer.func_239391_c_(renderTypeBuffer, this.model.getRenderType(texture), false, backpack.hasEffect());
+                IVertexBuilder overlayBuilder = ItemRenderer.func_239391_c_(renderTypeBuffer, RenderType.func_239263_a_(texture), false, backpack.hasEffect());
                 this.model.render(stack, overlayBuilder, packedLightIn, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
-                IVertexBuilder builder = ItemRenderer.func_239391_c_(renderTypeBuffer, this.model.getRenderType(item.getModelTexture()), false, backpack.hasEffect());
+                IVertexBuilder builder = ItemRenderer.func_239391_c_(renderTypeBuffer, RenderType.func_239263_a_(item.getModelTexture()), false, backpack.hasEffect());
                 this.model.render(stack, builder, packedLightIn, OverlayTexture.NO_OVERLAY, r, g, b, 1.0F);
             }
             else
             {
-                IVertexBuilder builder = ItemRenderer.func_239391_c_(renderTypeBuffer, this.model.getRenderType(item.getModelTexture()), false, backpack.hasEffect());
+                IVertexBuilder builder = ItemRenderer.func_239391_c_(renderTypeBuffer, RenderType.func_239263_a_(item.getModelTexture()), false, backpack.hasEffect());
                 this.model.render(stack, builder, packedLightIn, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
             }
 
