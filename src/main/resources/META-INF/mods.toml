@@ -12,6 +12,8 @@ logoFile="backpacker.png"
 credits=""
 authors="MrCrayfish"
 description="An addon for Backpacked that adds more variants of backpacks"
+itemIcon="backpacker:shulkerpack"
+configBackground="minecraft:textures/block/cobblestone.png"
 
 [[dependencies.backpacker]]
     modId="forge"
