@@ -1,19 +1,18 @@
 modLoader="javafml"
 loaderVersion="[34,)"
 license="GNU General Public License 3"
+issueTrackerURL="https://github.com/MrCrayfish/Backpacker/issues"
 
 [[mods]]
 modId="backpacker"
 version="1.3.0"
 displayName="Backpacker"
-updateJSONURL="https://raw.githubusercontent.com/MrCrayfish/ModUpdates/master/backpacker/update.json"
+updateJSONURL="https://mrcrayfish.com/modupdatejson?id=backpacker"
 displayURL="https://mrcrayfish.com/mods?id=backpacker"
 logoFile="backpacker.png"
 credits=""
 authors="MrCrayfish"
 description="An addon for Backpacked that adds more variants of backpacks"
-itemIcon="backpacker:shulkerpack"
-configBackground="minecraft:textures/block/cobblestone.png"
 
 [[dependencies.backpacker]]
     modId="forge"
@@ -33,3 +32,7 @@ configBackground="minecraft:textures/block/cobblestone.png"
     versionRange="[1.7.0,)"
     ordering="AFTER"
     side="BOTH"
+
+[modproperties.backpacker]
+    catalogueItemIcon="backpacker:shulkerpack"
+    configuredBackground="minecraft:textures/block/cobblestone.png"
